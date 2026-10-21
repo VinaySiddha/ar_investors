@@ -1,19 +1,33 @@
 /* ── Google Fonts (must be first) ─────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap');
 
 @import "tailwindcss";
 
-/* ── CSS Custom Properties ───────────────────────────────────────────────── */
+/* ── Official Brand Design Tokens ────────────────────────────────────────── */
 :root {
-  --bg: #0B0B0B;
-  --bg-elevated: #141414;
-  --border-gold: #C9A646;
-  --gold-light: #F5E3A1;
-  --gold: #D4AF37;
-  --gold-dark: #9C7A1E;
-  --text: #F2EAD3;
-  --muted: #A89F86;
-  --gold-gradient: linear-gradient(135deg, #F5E3A1, #D4AF37, #9C7A1E);
+  /* Official Backgrounds */
+  --bg: #050505;              /* Obsidian Black */
+  --bg-elevated: #171717;     /* Graphite Black */
+  --card-bg: #171717;         /* Graphite Black */
+
+  /* Official Gold Palette */
+  --gold: #D4AF62;            /* Champagne Gold - Primary Brand Color */
+  --gold-champagne: #D4AF62;  /* Champagne Gold */
+  --gold-radiant: #F8DF87;    /* Radiant Gold - Bright highlights */
+  --gold-light: #FFF0B8;      /* Pale Gold - Subtle reflections */
+  --gold-pale: #FFF0B8;       /* Pale Gold */
+  --gold-antique: #B08D57;    /* Antique Gold - Borders, dividers */
+  --border-gold: #B08D57;     /* Antique Gold */
+  --gold-dark: #8C6429;       /* Deep Accent */
+
+  /* Text Colors */
+  --text: #F7F4EA;            /* Crisp Warm Light */
+  --muted: #A39B8B;           /* Muted Secondary */
+
+  /* Official Luxury Metallic Gold Gradient */
+  --gold-gradient: linear-gradient(90deg, #8C6429 0%, #D4AF62 22%, #FFF0B8 42%, #F8DF87 58%, #B88632 78%, #F8DF87 100%);
+  --gold-gradient-135: linear-gradient(135deg, #8C6429 0%, #D4AF62 22%, #FFF0B8 42%, #F8DF87 58%, #B88632 78%, #F8DF87 100%);
+  --gold-glow: rgba(212, 175, 98, 0.35);
 }
 
 /* ── Base ─────────────────────────────────────────────────────────────────── */
@@ -41,7 +55,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -59,7 +73,7 @@ body {
 
 /* ── Selection ───────────────────────────────────────────────────────────── */
 ::selection {
-  background: rgba(212, 175, 55, 0.3);
+  background: rgba(212, 175, 98, 0.3);
   color: var(--gold-light);
 }
 
@@ -71,19 +85,28 @@ body {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--gold-dark);
+  background: var(--gold-antique);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold);
+  background: var(--gold-champagne);
 }
 
-/* ── Typography helpers ───────────────────────────────────────────────────── */
+/* ── Typography helpers (Modern Geometric Sans) ──────────────────────────── */
 .font-serif {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .font-sans {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.font-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* ── Gold shimmer text effect ─────────────────────────────────────────────── */

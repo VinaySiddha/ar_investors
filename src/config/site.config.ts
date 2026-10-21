@@ -10,12 +10,12 @@ export const site = {
 
   contact: {
     email: "info@arinvestors.qa",
-    whatsapp: "97400000000", // TODO: full number, digits only, with country code
-    whatsappNumber: "97400000000",
+    whatsapp: "9747530038055",
+    whatsappNumber: "9747530038055",
     whatsappMessage: "Hello AR Investor's, I would like to discuss an opportunity.",
     whatsappDefaultMessage: "Hello AR Investor's, I would like to discuss an opportunity.",
-    phone: "+974 0000 0000",
-    address: "Msheireb Downtown, Doha, Qatar",
+    phone: "+974 7530038055",
+    address: "Msheireb Downtown Doha Qatar",
     city: "Doha",
     country: "Qatar",
     countryCode: "QA",

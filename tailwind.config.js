@@ -7,31 +7,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#0B0B0B',
-        'bg-elevated': '#141414',
-        'border-gold': '#C9A646',
-        'gold-light': '#F5E3A1',
-        gold: '#D4AF37',
-        'gold-dark': '#9C7A1E',
-        text: '#F2EAD3',
-        muted: '#A89F86',
-        card: '#141414',
-        border: 'rgba(201, 166, 70, 0.3)',
+        bg: '#050505',               // Obsidian Black
+        'bg-elevated': '#171717',    // Graphite Black
+        card: '#171717',             // Graphite Black
+        gold: '#D4AF62',             // Champagne Gold (Primary Brand Color)
+        'gold-champagne': '#D4AF62', // Champagne Gold
+        'gold-radiant': '#F8DF87',   // Radiant Gold
+        'gold-light': '#FFF0B8',     // Pale Gold
+        'gold-pale': '#FFF0B8',      // Pale Gold
+        'gold-antique': '#B08D57',   // Antique Gold
+        'border-gold': '#B08D57',    // Antique Gold
+        'gold-dark': '#8C6429',
+        text: '#F7F4EA',
+        muted: '#A39B8B',
+        border: 'rgba(176, 141, 87, 0.35)',
         primary: {
-          DEFAULT: '#D4AF37',
-          foreground: '#0B0B0B',
+          DEFAULT: '#D4AF62',
+          foreground: '#050505',
         },
-        'muted-foreground': '#A89F86',
-        'sidebar-border': 'rgba(201, 166, 70, 0.25)',
+        'muted-foreground': '#A39B8B',
+        'sidebar-border': 'rgba(176, 141, 87, 0.25)',
       },
       fontFamily: {
-        sans: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        serif: ['Poppins', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
+        serif: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-serif'],
       },
       backgroundImage: {
-        'gold-gradient': 'linear-gradient(135deg, #F5E3A1, #D4AF37, #9C7A1E)',
-        'gold-gradient-h': 'linear-gradient(90deg, #F5E3A1, #D4AF37, #9C7A1E)',
+        'gold-gradient': 'linear-gradient(90deg, #8C6429 0%, #D4AF62 22%, #FFF0B8 42%, #F8DF87 58%, #B88632 78%, #F8DF87 100%)',
+        'gold-gradient-135': 'linear-gradient(135deg, #8C6429 0%, #D4AF62 22%, #FFF0B8 42%, #F8DF87 58%, #B88632 78%, #F8DF87 100%)',
       },
       boxShadow: {
         'gold-glow': '0 0 20px rgba(212, 175, 55, 0.25)',

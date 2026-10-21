@@ -109,7 +109,7 @@ export function Contact() {
               <ContactDetail
                 icon={<WhatsAppIcon />}
                 label="WhatsApp"
-                value={`+${contact.whatsappNumber.replace(/(\d{3})(\d{4})(\d{4})/, '$1 $2 $3')}`}
+                value="+974 7530038055"
                 href={buildWhatsAppUrl()}
                 external
               />
@@ -232,7 +232,7 @@ export function Contact() {
                         id="phone"
                         type="tel"
                         autoComplete="tel"
-                        placeholder="+974 5000 0000"
+                        placeholder="+974 7530038055"
                         className={inputClasses}
                         {...register('phone')}
                       />
