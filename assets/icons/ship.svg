@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#D4AF62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Tiny anchors on top -->
+  <path d="M7 4 L7 7 M5 5 L9 5 M4 6 C4 8 10 8 10 6" stroke-width="1"/>
+  <path d="M13 4 L13 7 M11 5 L15 5 M10 6 C10 8 16 8 16 6" stroke-width="1"/>
+  <!-- Vessel Superstructure -->
+  <path d="M12 11 L20 11 L19 18 L13 18 Z" fill="#D4AF62" fill-opacity="0.2"/>
+  <line x1="16" y1="8" x2="16" y2="11"/>
+  <!-- Hull -->
+  <path d="M3 21 L6 26 L26 26 L29 21 Z" fill="#D4AF62" fill-opacity="0.25"/>
+  <!-- Waterline waves -->
+  <path d="M1 28 C4 27, 7 29, 10 28 C13 27, 16 29, 19 28 C22 27, 25 29, 28 28 C30 27.5, 31 28, 32 28"/>
+</svg>

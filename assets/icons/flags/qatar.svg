@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="60" height="40">
+  <clipPath id="flag-clip">
+    <rect width="60" height="40" rx="5" ry="5"/>
+  </clipPath>
+  <g clip-path="url(#flag-clip)">
+    <!-- Maroon background -->
+    <rect width="60" height="40" fill="#8D1B3D"/>
+    <!-- White serrated hoist -->
+    <polygon points="0,0 20,0 25,2.22 20,4.44 25,6.67 20,8.89 25,11.11 20,13.33 25,15.56 20,17.78 25,20 20,22.22 25,24.44 20,26.67 25,28.89 20,31.11 25,33.33 20,35.56 25,37.78 20,40 0,40" fill="#FFFFFF"/>
+  </g>
+  <rect width="60" height="40" rx="5" ry="5" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="60" height="40">
+  <clipPath id="russia-clip">
+    <rect width="60" height="40" rx="5" ry="5"/>
+  </clipPath>
+  <g clip-path="url(#russia-clip)">
+    <rect width="60" height="13.33" y="0" fill="#FFFFFF"/>
+    <rect width="60" height="13.33" y="13.33" fill="#0039A6"/>
+    <rect width="60" height="13.34" y="26.66" fill="#D52B1E"/>
+  </g>
+  <rect width="60" height="40" rx="5" ry="5" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+</svg>
