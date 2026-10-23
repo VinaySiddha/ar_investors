@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# Disallow admin or staging paths
-Disallow: /admin/
-Disallow: /staging/
-
-# Sitemap location
-Sitemap: https://www.arinvestors.qa/sitemap.xml
