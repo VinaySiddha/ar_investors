@@ -154,7 +154,13 @@
     <header class="site-header">
       <div class="wrap bar">
         <a class="brand" href="/" aria-label="AR Investor’s home"
-          ><img class="logo" src="/favicon.svg" alt="" width="32" height="32">AR Investor’s</a
+          ><img
+            class="logo"
+            src="/favicon.svg"
+            alt=""
+            width="32"
+            height="32"
+          />AR Investor’s</a
         >
         <nav id="nav" aria-label="Primary">
           <ul>
@@ -234,26 +240,48 @@
           </div>
           <form
             class="card form"
+            id="contact-form"
             action="https://formsubmit.co/info@arinvestors.in"
             method="POST"
           >
             <h2 class="h3">Send an enquiry</h2>
             <p class="ok" id="sent" hidden role="status">
-              Thank you. Your message has been sent and we will reply by email.
+              Thank you. Your message has been sent. A confirmation is on its
+              way to your inbox and we will reply by email.
+            </p>
+            <p
+              id="err"
+              hidden
+              role="alert"
+              style="
+                background: #fdecec;
+                color: #9b1c1c;
+                border-radius: 12px;
+                padding: 12px 16px;
+                margin: 0 0 20px;
+              "
+            >
+              Sorry, your message could not be sent. Please email us at
+              <a href="mailto:info@arinvestors.in">info@arinvestors.in</a>.
             </p>
             <input
               type="hidden"
               name="_subject"
               value="New enquiry — AR Investor’s"
-            /><input type="hidden" name="_captcha" value="false" /><input
-              type="hidden"
-              name="_template"
-              value="table"
-            /><input
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
               type="hidden"
               name="_next"
               value="https://arinvestors.in/contact/?sent=1"
-            /><input
+            />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thank you for contacting AR Investor’s. We have received your enquiry and our Doha team will reply by email as soon as possible. Please do not send confidential financial documents by email. AR Investor’s, Msheireb Downtown, Doha, Qatar."
+            />
+            <input
               type="text"
               name="_honey"
               tabindex="-1"
@@ -345,6 +373,44 @@
         <p class="legal">© 2026 AR Investor’s. All rights reserved.</p>
       </div>
     </footer>
+    <script>
+      (function () {
+        var f = document.getElementById("contact-form");
+        if (!f || !window.fetch) return;
+        f.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var ok = document.getElementById("sent"),
+            er = document.getElementById("err"),
+            b = f.querySelector("button[type=submit]"),
+            t = b.textContent;
+          ok.hidden = true;
+          er.hidden = true;
+          b.disabled = true;
+          b.textContent = "Sending\u2026";
+          fetch(f.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+            method: "POST",
+            body: new FormData(f),
+            headers: { Accept: "application/json" },
+          })
+            .then(function (r) {
+              return r.json();
+            })
+            .then(function (d) {
+              if (!d || d.success === false || d.success === "false") throw 0;
+              f.reset();
+              ok.hidden = false;
+              ok.scrollIntoView({ behavior: "smooth", block: "center" });
+            })
+            .catch(function () {
+              er.hidden = false;
+            })
+            .then(function () {
+              b.disabled = false;
+              b.textContent = t;
+            });
+        });
+      })();
+    </script>
     <script src="/js/main.js" defer></script>
   </body>
 </html>
